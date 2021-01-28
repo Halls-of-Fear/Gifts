@@ -39,12 +39,13 @@ box-sizing: border-box;
 }
 
 .intro__title {
-    font-family: Moria;
+    font-family: 'Moria Citadel', sans-serif;
     font-size: 100px;
-    font-weight: 700px;
+    
     text-transform: uppercase;
     text-align: center;
     line-height: 1;
+    color: #dc9867;
 }
 
 .intro__subtitle {
