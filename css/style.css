@@ -36,22 +36,22 @@ box-sizing: border-box;
     width: 100%;
     max-width: 880px;
     margin: 0 auto;
+    text-align: center; /*Выравниваем все заголовки и кнопку по центру если отдельно,
+    то прям там и прописываем это, а тут убираем*/
 }
 
 .intro__title {
     font-family: 'Moria Citadel', sans-serif;
     font-size: 100px;
-    
     text-transform: uppercase;
-    text-align: center;
     line-height: 1;
     color: #dc9867;
 }
 
 .intro__subtitle {
+    margin-bottom: 20px;
     font-size: 72px;
     color: #ffffff;
-    text-align: center;
 }
 
 /*header*/
@@ -103,4 +103,27 @@ text-transform: uppercase;
 
 .nav__link:hover {
     color: #4682b4;  
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    
+    border: 3px solid #2f89bc;
+    
+    font-size: 14px;
+    font-weight: 700;
+    color: #a4cdd3;
+    background-color: #194a66;
+    text-transform: uppercase;
+    text-decoration: none; /* убрать подчеркивание ссылки*/
+    
+    transition: background .2s linear, color .2s linear;
+}
+
+.btn:hover {
+background-color: #3a94c7;
+color: #fff1f1;
 }
