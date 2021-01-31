@@ -15,8 +15,8 @@ box-sizing: border-box;
 /* container*/
 .container {
     width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
+    max-width: 90%; /*максимальная ширина до краев экрана*/
+    margin: 0 auto; /*выравнять по центру если есть такая опция как выше*/
 }
 
 /*intro*/
@@ -33,23 +33,26 @@ box-sizing: border-box;
 }
 
 .intro__inner {
-    width: 100%;
+    /*width: 100%;
     max-width: 880px;
     margin: 0 auto;
-    text-align: center; /*Выравниваем все заголовки и кнопку по центру если отдельно,
+    text-align: center;*/ /*Выравниваем все заголовки и кнопку по центру если отдельно,
     то прям там и прописываем это, а тут убираем*/
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .intro__title {
     font-family: 'Moria Citadel', sans-serif;
     font-size: 100px;
-    text-transform: uppercase;
+    text-transform: uppercase; /*все большими буквами*/
     line-height: 1;
     color: #dc9867;
 }
 
 .intro__subtitle {
-    margin-bottom: 20px;
     font-size: 72px;
     color: #ffffff;
 }
@@ -57,8 +60,8 @@ box-sizing: border-box;
 /*header*/
 .header {
     width: 100%;
-    padding-top: 15px; /*от верхнего края отступ*/
-    position: absolute;
+    padding-top: 15px; /*отступ внутри от верхнего края*/
+    position: absolute; /*закинуть поверх*/
     top: 0;
     left: 0;
     right: 0;
@@ -66,15 +69,16 @@ box-sizing: border-box;
 }
 
 .header_inner {
-    display: flex; /* вместе в одну строчку элементы */
+    display: flex; /* вместе в одну строчку элементы, включаем  flexbox */
     justify-content: space-between; /* отодвигает элементы друг от друга в края */
-    align-items: center; /* выровнять горизонтали по центру*/
+    align-items:center; /* выровнять  относительно горизонтальной линии центра элементов
+    по вертикали. В данном случае по центру */
 }
 
 .header__logo {
     font-size: 30px;
     font-weight: 700;
-    display: inline-block;
+    display: inline-block; /*в блоке*/
     vertical-align: top;
     margin: 10px;
     color: #f5f5f5;
@@ -83,7 +87,7 @@ box-sizing: border-box;
 }
 
 .header__logo:hover {
-    color: #9147ff;  
+    color: #9147ff;  /*при наведении мыши меняем цвет*/
 }
 
 /*nav*/
@@ -95,7 +99,7 @@ text-transform: uppercase;
 .nav__link {
     display: inline-block;
     vertical-align: top;
-    margin: 10px;
+    margin: 10px; /*отступ по всем фронтам снаружи элемента*/
     color: #f5f5f5;
     text-decoration: none;
     transition: color .2s linear;
@@ -106,6 +110,9 @@ text-transform: uppercase;
 }
 
 /* Button */
+.btn__inner {
+    text-align: center;
+}
 .btn {
     display: inline-block;
     vertical-align: top;
@@ -121,10 +128,10 @@ text-transform: uppercase;
     text-transform: uppercase;
     text-decoration: none; /* убрать подчеркивание ссылки*/
     
-    transition: background .2s linear, color .2s linear;
+    transition: background .2s linear, color .2s linear; /*смена цвета фона и текста с задержкой в 0.2с*/
 }
 
 .btn:hover {
-background-color: #3a94c7;
-color: #fff1f1;
+background-color: #3a94c7;  /*смена фона при наведении мыши*/
+color: #fff1f1; /*смена цвета текста при наведении мыши */
 }
