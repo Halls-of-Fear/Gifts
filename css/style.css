@@ -25,7 +25,7 @@ box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 70vh; /* vh-1% относительно окна браузера*/
     background:
     url(../images/head2.png) center no-repeat;
     -webkit-background-size: cover;
@@ -138,4 +138,26 @@ text-transform: uppercase;
 .btn:hover {
 background-color: #3a94c7;  /*смена фона при наведении мыши*/
 color: #fff1f1; /*смена цвета текста при наведении мыши */
+}
+
+/* Section */
+.section {
+    padding: 10px 0;  /*отступ всей секции. первая цифра верх вниз, вторая лево.право */
+}
+
+.section__header {
+    width: 100%;
+    max-width: 950px; /*макс ширина*/
+    margin: 0 auto 40px; /* отступ от блочного элемента заголовков до другого. если 3 то сверху/горизонтально/снизу
+    если два, то верт/гориз, если 1 то всем,
+    если 4 то сверху | справа | снизу | слева, если 0 то нету, если auto то авто. можно margin-bottom спецом для низа */
+    
+    text-align:center;
+}
+
+.section__title {
+    font-size: 28px;
+    color:#194a66;
+    text-decoration: none;
+    font-weight: 700;
 }
