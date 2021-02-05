@@ -122,22 +122,22 @@ text-transform: uppercase;
     vertical-align: top;
     padding: 8px 30px;
     
-    border: 3px solid #2f89bc;
+    border: 3px solid #34404f;
     border-radius: 3px;
     
     font-size: 14px;
     font-weight: 700;
-    color: #a4cdd3;
-    background-color: #194a66;
+    color: #b4d7f4;
+    background:linear-gradient(to right, #3ca1f0, #2461d0);
     text-transform: uppercase;
     text-decoration: none; /* убрать подчеркивание ссылки*/
     
-    transition: background .2s linear, color .2s linear; /*смена цвета фона и текста с задержкой в 0.2с*/
+    transition: color .2s linear; /*смена цвета текста с задержкой в 0.2с*/
 }
 
 .btn:hover {
-background-color: #3a94c7;  /*смена фона при наведении мыши*/
-color: #fff1f1; /*смена цвета текста при наведении мыши */
+background:linear-gradient(to right, #47bfff, #3387e3);  /*смена фона при наведении мыши по градиенту*/
+color: #ebf6fc; /*смена цвета текста при наведении мыши */
 }
 
 /* Section */
@@ -165,4 +165,35 @@ color: #fff1f1; /*смена цвета текста при наведении �
 
 .section__image {
     margin-left: 10px;
+}
+
+/* about */
+.about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__item {
+    width: 100px; /* блок под картинкой и его ширина соответств. картинке*/
+}
+
+.about__item:hover .about__img {
+    transform: translate3d(-10px, -10px, 0); /* переезд на 10 пикселей по xyz */
+}
+
+.about__item:hover .about__img img {
+    opacity: .6; /* прозрачность картинки делаем новый тег для блока с картинкой */
+}
+
+.about__img {
+    background: linear-gradient(to bottom, #4682b4, #b4d7f4 ); /*градиент цветового блока под картинкой */
+    
+    transition: transform .2s linear; /* плавность переезда */
+}
+
+.about__img img {
+    display: block;
+    width: 100px;
+    height: 70px;
+    transition: opacity .1s linear;  /* плавность прозрачности*/
 }
